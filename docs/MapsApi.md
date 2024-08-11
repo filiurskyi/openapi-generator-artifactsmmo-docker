@@ -32,7 +32,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MapsApi(api_client)
     content_type = 'content_type_example' # str | Type of content on the map. (optional)
@@ -42,7 +42,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Maps
-        api_response = await api_instance.get_all_maps_maps_get(content_type=content_type, content_code=content_code, page=page, size=size)
+        api_response = api_instance.get_all_maps_maps_get(content_type=content_type, content_code=content_code, page=page, size=size)
         print("The response of MapsApi->get_all_maps_maps_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -107,7 +107,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MapsApi(api_client)
     x = 56 # int | The position x of the map.
@@ -115,7 +115,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get Map
-        api_response = await api_instance.get_map_maps_xy_get(x, y)
+        api_response = api_instance.get_map_maps_xy_get(x, y)
         print("The response of MapsApi->get_map_maps_xy_get:\n")
         pprint(api_response)
     except Exception as e:

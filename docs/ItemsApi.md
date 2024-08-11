@@ -32,7 +32,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.ItemsApi(api_client)
     min_level = 56 # int | Minimum level items. (optional)
@@ -46,7 +46,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Items
-        api_response = await api_instance.get_all_items_items_get(min_level=min_level, max_level=max_level, name=name, type=type, craft_skill=craft_skill, craft_material=craft_material, page=page, size=size)
+        api_response = api_instance.get_all_items_items_get(min_level=min_level, max_level=max_level, name=name, type=type, craft_skill=craft_skill, craft_material=craft_material, page=page, size=size)
         print("The response of ItemsApi->get_all_items_items_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -115,14 +115,14 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.ItemsApi(api_client)
     code = 'code_example' # str | The code of the item.
 
     try:
         # Get Item
-        api_response = await api_instance.get_item_items_code_get(code)
+        api_response = api_instance.get_item_items_code_get(code)
         print("The response of ItemsApi->get_item_items_code_get:\n")
         pprint(api_response)
     except Exception as e:

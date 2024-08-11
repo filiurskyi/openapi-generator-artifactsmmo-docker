@@ -45,14 +45,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.CharactersApi(api_client)
     add_character_schema = pyartifactsmmo.AddCharacterSchema() # AddCharacterSchema | 
 
     try:
         # Create Character
-        api_response = await api_instance.create_character_characters_create_post(add_character_schema)
+        api_response = api_instance.create_character_characters_create_post(add_character_schema)
         print("The response of CharactersApi->create_character_characters_create_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -126,14 +126,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.CharactersApi(api_client)
     delete_character_schema = pyartifactsmmo.DeleteCharacterSchema() # DeleteCharacterSchema | 
 
     try:
         # Delete Character
-        api_response = await api_instance.delete_character_characters_delete_post(delete_character_schema)
+        api_response = api_instance.delete_character_characters_delete_post(delete_character_schema)
         print("The response of CharactersApi->delete_character_characters_delete_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -195,7 +195,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.CharactersApi(api_client)
     sort = 'sort_example' # str | Default sort by combat total XP. (optional)
@@ -204,7 +204,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Characters
-        api_response = await api_instance.get_all_characters_characters_get(sort=sort, page=page, size=size)
+        api_response = api_instance.get_all_characters_characters_get(sort=sort, page=page, size=size)
         print("The response of CharactersApi->get_all_characters_characters_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -268,14 +268,14 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.CharactersApi(api_client)
     name = 'name_example' # str | The character name.
 
     try:
         # Get Character
-        api_response = await api_instance.get_character_characters_name_get(name)
+        api_response = api_instance.get_character_characters_name_get(name)
         print("The response of CharactersApi->get_character_characters_name_get:\n")
         pprint(api_response)
     except Exception as e:

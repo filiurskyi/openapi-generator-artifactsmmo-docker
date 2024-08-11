@@ -40,7 +40,7 @@ class EventsApi:
 
 
     @validate_call
-    async def get_all_events_events_get(
+    def get_all_events_events_get(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -100,11 +100,11 @@ class EventsApi:
             '200': "DataPageActiveEventSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -112,7 +112,7 @@ class EventsApi:
 
 
     @validate_call
-    async def get_all_events_events_get_with_http_info(
+    def get_all_events_events_get_with_http_info(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -172,11 +172,11 @@ class EventsApi:
             '200': "DataPageActiveEventSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -184,7 +184,7 @@ class EventsApi:
 
 
     @validate_call
-    async def get_all_events_events_get_without_preload_content(
+    def get_all_events_events_get_without_preload_content(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -244,7 +244,7 @@ class EventsApi:
             '200': "DataPageActiveEventSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

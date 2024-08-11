@@ -43,7 +43,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def create_character_characters_create_post(
+    def create_character_characters_create_post(
         self,
         add_character_schema: AddCharacterSchema,
         _request_timeout: Union[
@@ -100,11 +100,11 @@ class CharactersApi:
             '494': None,
             '495': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -112,7 +112,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def create_character_characters_create_post_with_http_info(
+    def create_character_characters_create_post_with_http_info(
         self,
         add_character_schema: AddCharacterSchema,
         _request_timeout: Union[
@@ -169,11 +169,11 @@ class CharactersApi:
             '494': None,
             '495': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -181,7 +181,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def create_character_characters_create_post_without_preload_content(
+    def create_character_characters_create_post_without_preload_content(
         self,
         add_character_schema: AddCharacterSchema,
         _request_timeout: Union[
@@ -238,7 +238,7 @@ class CharactersApi:
             '494': None,
             '495': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -321,7 +321,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def delete_character_characters_delete_post(
+    def delete_character_characters_delete_post(
         self,
         delete_character_schema: DeleteCharacterSchema,
         _request_timeout: Union[
@@ -377,11 +377,11 @@ class CharactersApi:
             '200': "CharacterResponseSchema",
             '498': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -389,7 +389,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def delete_character_characters_delete_post_with_http_info(
+    def delete_character_characters_delete_post_with_http_info(
         self,
         delete_character_schema: DeleteCharacterSchema,
         _request_timeout: Union[
@@ -445,11 +445,11 @@ class CharactersApi:
             '200': "CharacterResponseSchema",
             '498': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -457,7 +457,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def delete_character_characters_delete_post_without_preload_content(
+    def delete_character_characters_delete_post_without_preload_content(
         self,
         delete_character_schema: DeleteCharacterSchema,
         _request_timeout: Union[
@@ -513,7 +513,7 @@ class CharactersApi:
             '200': "CharacterResponseSchema",
             '498': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -596,7 +596,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def get_all_characters_characters_get(
+    def get_all_characters_characters_get(
         self,
         sort: Annotated[Optional[StrictStr], Field(description="Default sort by combat total XP.")] = None,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
@@ -660,11 +660,11 @@ class CharactersApi:
             '200': "DataPageCharacterSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -672,7 +672,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def get_all_characters_characters_get_with_http_info(
+    def get_all_characters_characters_get_with_http_info(
         self,
         sort: Annotated[Optional[StrictStr], Field(description="Default sort by combat total XP.")] = None,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
@@ -736,11 +736,11 @@ class CharactersApi:
             '200': "DataPageCharacterSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -748,7 +748,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def get_all_characters_characters_get_without_preload_content(
+    def get_all_characters_characters_get_without_preload_content(
         self,
         sort: Annotated[Optional[StrictStr], Field(description="Default sort by combat total XP.")] = None,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
@@ -812,7 +812,7 @@ class CharactersApi:
             '200': "DataPageCharacterSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -893,7 +893,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def get_character_characters_name_get(
+    def get_character_characters_name_get(
         self,
         name: Annotated[str, Field(strict=True, description="The character name.")],
         _request_timeout: Union[
@@ -949,11 +949,11 @@ class CharactersApi:
             '200': "CharacterResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -961,7 +961,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def get_character_characters_name_get_with_http_info(
+    def get_character_characters_name_get_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="The character name.")],
         _request_timeout: Union[
@@ -1017,11 +1017,11 @@ class CharactersApi:
             '200': "CharacterResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1029,7 +1029,7 @@ class CharactersApi:
 
 
     @validate_call
-    async def get_character_characters_name_get_without_preload_content(
+    def get_character_characters_name_get_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="The character name.")],
         _request_timeout: Union[
@@ -1085,7 +1085,7 @@ class CharactersApi:
             '200': "CharacterResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

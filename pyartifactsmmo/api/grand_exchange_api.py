@@ -41,7 +41,7 @@ class GrandExchangeApi:
 
 
     @validate_call
-    async def get_all_ge_items_ge_get(
+    def get_all_ge_items_ge_get(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -101,11 +101,11 @@ class GrandExchangeApi:
             '200': "DataPageGEItemSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -113,7 +113,7 @@ class GrandExchangeApi:
 
 
     @validate_call
-    async def get_all_ge_items_ge_get_with_http_info(
+    def get_all_ge_items_ge_get_with_http_info(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -173,11 +173,11 @@ class GrandExchangeApi:
             '200': "DataPageGEItemSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -185,7 +185,7 @@ class GrandExchangeApi:
 
 
     @validate_call
-    async def get_all_ge_items_ge_get_without_preload_content(
+    def get_all_ge_items_ge_get_without_preload_content(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -245,7 +245,7 @@ class GrandExchangeApi:
             '200': "DataPageGEItemSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -321,7 +321,7 @@ class GrandExchangeApi:
 
 
     @validate_call
-    async def get_ge_item_ge_code_get(
+    def get_ge_item_ge_code_get(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the item.")],
         _request_timeout: Union[
@@ -377,11 +377,11 @@ class GrandExchangeApi:
             '200': "GEItemResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -389,7 +389,7 @@ class GrandExchangeApi:
 
 
     @validate_call
-    async def get_ge_item_ge_code_get_with_http_info(
+    def get_ge_item_ge_code_get_with_http_info(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the item.")],
         _request_timeout: Union[
@@ -445,11 +445,11 @@ class GrandExchangeApi:
             '200': "GEItemResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -457,7 +457,7 @@ class GrandExchangeApi:
 
 
     @validate_call
-    async def get_ge_item_ge_code_get_without_preload_content(
+    def get_ge_item_ge_code_get_without_preload_content(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the item.")],
         _request_timeout: Union[
@@ -513,7 +513,7 @@ class GrandExchangeApi:
             '200': "GEItemResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

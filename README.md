@@ -72,14 +72,14 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.AccountsApi(api_client)
     add_account_schema = pyartifactsmmo.AddAccountSchema() # AddAccountSchema | 
 
     try:
         # Create Account
-        api_response = await api_instance.create_account_accounts_create_post(add_account_schema)
+        api_response = api_instance.create_account_accounts_create_post(add_account_schema)
         print("The response of AccountsApi->create_account_accounts_create_post:\n")
         pprint(api_response)
     except ApiException as e:

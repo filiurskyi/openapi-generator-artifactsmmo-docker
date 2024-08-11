@@ -60,7 +60,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_accept_new_task_my_name_action_task_new_post(
+    def action_accept_new_task_my_name_action_task_new_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -120,11 +120,11 @@ class MyCharactersApi:
             '598': None,
             '489': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -132,7 +132,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_accept_new_task_my_name_action_task_new_post_with_http_info(
+    def action_accept_new_task_my_name_action_task_new_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -192,11 +192,11 @@ class MyCharactersApi:
             '598': None,
             '489': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -204,7 +204,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_accept_new_task_my_name_action_task_new_post_without_preload_content(
+    def action_accept_new_task_my_name_action_task_new_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -264,7 +264,7 @@ class MyCharactersApi:
             '598': None,
             '489': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -334,7 +334,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_complete_task_my_name_action_task_complete_post(
+    def action_complete_task_my_name_action_task_complete_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -396,11 +396,11 @@ class MyCharactersApi:
             '487': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -408,7 +408,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_complete_task_my_name_action_task_complete_post_with_http_info(
+    def action_complete_task_my_name_action_task_complete_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -470,11 +470,11 @@ class MyCharactersApi:
             '487': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -482,7 +482,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_complete_task_my_name_action_task_complete_post_without_preload_content(
+    def action_complete_task_my_name_action_task_complete_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -544,7 +544,7 @@ class MyCharactersApi:
             '487': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -614,7 +614,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_crafting_my_name_action_crafting_post(
+    def action_crafting_my_name_action_crafting_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         crafting_schema: CraftingSchema,
@@ -681,11 +681,11 @@ class MyCharactersApi:
             '493': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -693,7 +693,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_crafting_my_name_action_crafting_post_with_http_info(
+    def action_crafting_my_name_action_crafting_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         crafting_schema: CraftingSchema,
@@ -760,11 +760,11 @@ class MyCharactersApi:
             '493': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -772,7 +772,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_crafting_my_name_action_crafting_post_without_preload_content(
+    def action_crafting_my_name_action_crafting_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         crafting_schema: CraftingSchema,
@@ -839,7 +839,7 @@ class MyCharactersApi:
             '493': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -925,7 +925,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_delete_item_my_name_action_delete_post(
+    def action_delete_item_my_name_action_delete_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -988,11 +988,11 @@ class MyCharactersApi:
             '486': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1000,7 +1000,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_delete_item_my_name_action_delete_post_with_http_info(
+    def action_delete_item_my_name_action_delete_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -1063,11 +1063,11 @@ class MyCharactersApi:
             '486': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1075,7 +1075,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_delete_item_my_name_action_delete_post_without_preload_content(
+    def action_delete_item_my_name_action_delete_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -1138,7 +1138,7 @@ class MyCharactersApi:
             '486': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1224,7 +1224,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(
+    def action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         deposit_withdraw_gold_schema: DepositWithdrawGoldSchema,
@@ -1289,11 +1289,11 @@ class MyCharactersApi:
             '461': None,
             '486': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1301,7 +1301,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_deposit_bank_gold_my_name_action_bank_deposit_gold_post_with_http_info(
+    def action_deposit_bank_gold_my_name_action_bank_deposit_gold_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         deposit_withdraw_gold_schema: DepositWithdrawGoldSchema,
@@ -1366,11 +1366,11 @@ class MyCharactersApi:
             '461': None,
             '486': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1378,7 +1378,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_deposit_bank_gold_my_name_action_bank_deposit_gold_post_without_preload_content(
+    def action_deposit_bank_gold_my_name_action_bank_deposit_gold_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         deposit_withdraw_gold_schema: DepositWithdrawGoldSchema,
@@ -1443,7 +1443,7 @@ class MyCharactersApi:
             '461': None,
             '486': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1529,7 +1529,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_deposit_bank_my_name_action_bank_deposit_post(
+    def action_deposit_bank_my_name_action_bank_deposit_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -1595,11 +1595,11 @@ class MyCharactersApi:
             '486': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1607,7 +1607,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_deposit_bank_my_name_action_bank_deposit_post_with_http_info(
+    def action_deposit_bank_my_name_action_bank_deposit_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -1673,11 +1673,11 @@ class MyCharactersApi:
             '486': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1685,7 +1685,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_deposit_bank_my_name_action_bank_deposit_post_without_preload_content(
+    def action_deposit_bank_my_name_action_bank_deposit_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -1751,7 +1751,7 @@ class MyCharactersApi:
             '486': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1837,7 +1837,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_equip_item_my_name_action_equip_post(
+    def action_equip_item_my_name_action_equip_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         equip_schema: EquipSchema,
@@ -1904,11 +1904,11 @@ class MyCharactersApi:
             '491': None,
             '485': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1916,7 +1916,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_equip_item_my_name_action_equip_post_with_http_info(
+    def action_equip_item_my_name_action_equip_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         equip_schema: EquipSchema,
@@ -1983,11 +1983,11 @@ class MyCharactersApi:
             '491': None,
             '485': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1995,7 +1995,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_equip_item_my_name_action_equip_post_without_preload_content(
+    def action_equip_item_my_name_action_equip_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         equip_schema: EquipSchema,
@@ -2062,7 +2062,7 @@ class MyCharactersApi:
             '491': None,
             '485': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2148,7 +2148,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_fight_my_name_action_fight_post(
+    def action_fight_my_name_action_fight_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -2208,11 +2208,11 @@ class MyCharactersApi:
             '486': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2220,7 +2220,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_fight_my_name_action_fight_post_with_http_info(
+    def action_fight_my_name_action_fight_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -2280,11 +2280,11 @@ class MyCharactersApi:
             '486': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2292,7 +2292,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_fight_my_name_action_fight_post_without_preload_content(
+    def action_fight_my_name_action_fight_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -2352,7 +2352,7 @@ class MyCharactersApi:
             '486': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2422,7 +2422,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_gathering_my_name_action_gathering_post(
+    def action_gathering_my_name_action_gathering_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -2483,11 +2483,11 @@ class MyCharactersApi:
             '493': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2495,7 +2495,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_gathering_my_name_action_gathering_post_with_http_info(
+    def action_gathering_my_name_action_gathering_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -2556,11 +2556,11 @@ class MyCharactersApi:
             '493': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2568,7 +2568,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_gathering_my_name_action_gathering_post_without_preload_content(
+    def action_gathering_my_name_action_gathering_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -2629,7 +2629,7 @@ class MyCharactersApi:
             '493': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2699,7 +2699,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_ge_buy_item_my_name_action_ge_buy_post(
+    def action_ge_buy_item_my_name_action_ge_buy_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         ge_transaction_item_schema: GETransactionItemSchema,
@@ -2767,11 +2767,11 @@ class MyCharactersApi:
             '480': None,
             '482': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2779,7 +2779,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_ge_buy_item_my_name_action_ge_buy_post_with_http_info(
+    def action_ge_buy_item_my_name_action_ge_buy_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         ge_transaction_item_schema: GETransactionItemSchema,
@@ -2847,11 +2847,11 @@ class MyCharactersApi:
             '480': None,
             '482': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2859,7 +2859,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_ge_buy_item_my_name_action_ge_buy_post_without_preload_content(
+    def action_ge_buy_item_my_name_action_ge_buy_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         ge_transaction_item_schema: GETransactionItemSchema,
@@ -2927,7 +2927,7 @@ class MyCharactersApi:
             '480': None,
             '482': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3013,7 +3013,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_ge_sell_item_my_name_action_ge_sell_post(
+    def action_ge_sell_item_my_name_action_ge_sell_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         ge_transaction_item_schema: GETransactionItemSchema,
@@ -3080,11 +3080,11 @@ class MyCharactersApi:
             '482': None,
             '598': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3092,7 +3092,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_ge_sell_item_my_name_action_ge_sell_post_with_http_info(
+    def action_ge_sell_item_my_name_action_ge_sell_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         ge_transaction_item_schema: GETransactionItemSchema,
@@ -3159,11 +3159,11 @@ class MyCharactersApi:
             '482': None,
             '598': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3171,7 +3171,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_ge_sell_item_my_name_action_ge_sell_post_without_preload_content(
+    def action_ge_sell_item_my_name_action_ge_sell_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         ge_transaction_item_schema: GETransactionItemSchema,
@@ -3238,7 +3238,7 @@ class MyCharactersApi:
             '482': None,
             '598': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3324,7 +3324,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_move_my_name_action_move_post(
+    def action_move_my_name_action_move_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         destination_schema: DestinationSchema,
@@ -3388,11 +3388,11 @@ class MyCharactersApi:
             '404': None,
             '486': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3400,7 +3400,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_move_my_name_action_move_post_with_http_info(
+    def action_move_my_name_action_move_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         destination_schema: DestinationSchema,
@@ -3464,11 +3464,11 @@ class MyCharactersApi:
             '404': None,
             '486': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3476,7 +3476,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_move_my_name_action_move_post_without_preload_content(
+    def action_move_my_name_action_move_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         destination_schema: DestinationSchema,
@@ -3540,7 +3540,7 @@ class MyCharactersApi:
             '404': None,
             '486': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3626,7 +3626,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_recycling_my_name_action_recycling_post(
+    def action_recycling_my_name_action_recycling_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         recycling_schema: RecyclingSchema,
@@ -3694,11 +3694,11 @@ class MyCharactersApi:
             '478': None,
             '473': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3706,7 +3706,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_recycling_my_name_action_recycling_post_with_http_info(
+    def action_recycling_my_name_action_recycling_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         recycling_schema: RecyclingSchema,
@@ -3774,11 +3774,11 @@ class MyCharactersApi:
             '478': None,
             '473': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3786,7 +3786,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_recycling_my_name_action_recycling_post_without_preload_content(
+    def action_recycling_my_name_action_recycling_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         recycling_schema: RecyclingSchema,
@@ -3854,7 +3854,7 @@ class MyCharactersApi:
             '478': None,
             '473': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3940,7 +3940,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_task_exchange_my_name_action_task_exchange_post(
+    def action_task_exchange_my_name_action_task_exchange_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -4001,11 +4001,11 @@ class MyCharactersApi:
             '478': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4013,7 +4013,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_task_exchange_my_name_action_task_exchange_post_with_http_info(
+    def action_task_exchange_my_name_action_task_exchange_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -4074,11 +4074,11 @@ class MyCharactersApi:
             '478': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4086,7 +4086,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_task_exchange_my_name_action_task_exchange_post_without_preload_content(
+    def action_task_exchange_my_name_action_task_exchange_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         _request_timeout: Union[
@@ -4147,7 +4147,7 @@ class MyCharactersApi:
             '478': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4217,7 +4217,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_unequip_item_my_name_action_unequip_post(
+    def action_unequip_item_my_name_action_unequip_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         unequip_schema: UnequipSchema,
@@ -4282,11 +4282,11 @@ class MyCharactersApi:
             '491': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4294,7 +4294,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_unequip_item_my_name_action_unequip_post_with_http_info(
+    def action_unequip_item_my_name_action_unequip_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         unequip_schema: UnequipSchema,
@@ -4359,11 +4359,11 @@ class MyCharactersApi:
             '491': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4371,7 +4371,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_unequip_item_my_name_action_unequip_post_without_preload_content(
+    def action_unequip_item_my_name_action_unequip_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         unequip_schema: UnequipSchema,
@@ -4436,7 +4436,7 @@ class MyCharactersApi:
             '491': None,
             '497': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4522,7 +4522,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(
+    def action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         deposit_withdraw_gold_schema: DepositWithdrawGoldSchema,
@@ -4587,11 +4587,11 @@ class MyCharactersApi:
             '598': None,
             '460': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4599,7 +4599,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post_with_http_info(
+    def action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         deposit_withdraw_gold_schema: DepositWithdrawGoldSchema,
@@ -4664,11 +4664,11 @@ class MyCharactersApi:
             '598': None,
             '460': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4676,7 +4676,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post_without_preload_content(
+    def action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         deposit_withdraw_gold_schema: DepositWithdrawGoldSchema,
@@ -4741,7 +4741,7 @@ class MyCharactersApi:
             '598': None,
             '460': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4827,7 +4827,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_withdraw_bank_my_name_action_bank_withdraw_post(
+    def action_withdraw_bank_my_name_action_bank_withdraw_post(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -4894,11 +4894,11 @@ class MyCharactersApi:
             '598': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4906,7 +4906,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_withdraw_bank_my_name_action_bank_withdraw_post_with_http_info(
+    def action_withdraw_bank_my_name_action_bank_withdraw_post_with_http_info(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -4973,11 +4973,11 @@ class MyCharactersApi:
             '598': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4985,7 +4985,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def action_withdraw_bank_my_name_action_bank_withdraw_post_without_preload_content(
+    def action_withdraw_bank_my_name_action_bank_withdraw_post_without_preload_content(
         self,
         name: Annotated[str, Field(strict=True, description="Name of your character.")],
         simple_item_schema: SimpleItemSchema,
@@ -5052,7 +5052,7 @@ class MyCharactersApi:
             '598': None,
             '478': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -5138,7 +5138,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def get_all_characters_logs_my_logs_get(
+    def get_all_characters_logs_my_logs_get(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -5199,11 +5199,11 @@ class MyCharactersApi:
             '404': None,
             '498': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5211,7 +5211,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def get_all_characters_logs_my_logs_get_with_http_info(
+    def get_all_characters_logs_my_logs_get_with_http_info(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -5272,11 +5272,11 @@ class MyCharactersApi:
             '404': None,
             '498': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5284,7 +5284,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def get_all_characters_logs_my_logs_get_without_preload_content(
+    def get_all_characters_logs_my_logs_get_without_preload_content(
         self,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
         size: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="Page size")] = None,
@@ -5345,7 +5345,7 @@ class MyCharactersApi:
             '404': None,
             '498': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -5422,7 +5422,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def get_my_characters_my_characters_get(
+    def get_my_characters_my_characters_get(
         self,
         _request_timeout: Union[
             None,
@@ -5474,11 +5474,11 @@ class MyCharactersApi:
             '200': "MyCharactersListSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5486,7 +5486,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def get_my_characters_my_characters_get_with_http_info(
+    def get_my_characters_my_characters_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -5538,11 +5538,11 @@ class MyCharactersApi:
             '200': "MyCharactersListSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5550,7 +5550,7 @@ class MyCharactersApi:
 
 
     @validate_call
-    async def get_my_characters_my_characters_get_without_preload_content(
+    def get_my_characters_my_characters_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -5602,7 +5602,7 @@ class MyCharactersApi:
             '200': "MyCharactersListSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

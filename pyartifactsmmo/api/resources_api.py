@@ -41,7 +41,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_all_resources_resources_get(
+    def get_all_resources_resources_get(
         self,
         min_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Skill minimum level.")] = None,
         max_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Skill maximum level.")] = None,
@@ -117,11 +117,11 @@ class ResourcesApi:
             '200': "DataPageResourceSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -129,7 +129,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_all_resources_resources_get_with_http_info(
+    def get_all_resources_resources_get_with_http_info(
         self,
         min_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Skill minimum level.")] = None,
         max_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Skill maximum level.")] = None,
@@ -205,11 +205,11 @@ class ResourcesApi:
             '200': "DataPageResourceSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -217,7 +217,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_all_resources_resources_get_without_preload_content(
+    def get_all_resources_resources_get_without_preload_content(
         self,
         min_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Skill minimum level.")] = None,
         max_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Skill maximum level.")] = None,
@@ -293,7 +293,7 @@ class ResourcesApi:
             '200': "DataPageResourceSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -389,7 +389,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_resources_code_get(
+    def get_resource_resources_code_get(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the resource.")],
         _request_timeout: Union[
@@ -445,11 +445,11 @@ class ResourcesApi:
             '200': "ResourceResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -457,7 +457,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_resources_code_get_with_http_info(
+    def get_resource_resources_code_get_with_http_info(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the resource.")],
         _request_timeout: Union[
@@ -513,11 +513,11 @@ class ResourcesApi:
             '200': "ResourceResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -525,7 +525,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_resources_code_get_without_preload_content(
+    def get_resource_resources_code_get_without_preload_content(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the resource.")],
         _request_timeout: Union[
@@ -581,7 +581,7 @@ class ResourcesApi:
             '200': "ResourceResponseSchema",
             '404': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

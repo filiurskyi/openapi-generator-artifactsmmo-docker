@@ -38,7 +38,7 @@ class AccountsApi:
 
 
     @validate_call
-    async def create_account_accounts_create_post(
+    def create_account_accounts_create_post(
         self,
         add_account_schema: AddAccountSchema,
         _request_timeout: Union[
@@ -95,11 +95,11 @@ class AccountsApi:
             '456': None,
             '457': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -107,7 +107,7 @@ class AccountsApi:
 
 
     @validate_call
-    async def create_account_accounts_create_post_with_http_info(
+    def create_account_accounts_create_post_with_http_info(
         self,
         add_account_schema: AddAccountSchema,
         _request_timeout: Union[
@@ -164,11 +164,11 @@ class AccountsApi:
             '456': None,
             '457': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -176,7 +176,7 @@ class AccountsApi:
 
 
     @validate_call
-    async def create_account_accounts_create_post_without_preload_content(
+    def create_account_accounts_create_post_without_preload_content(
         self,
         add_account_schema: AddAccountSchema,
         _request_timeout: Union[
@@ -233,7 +233,7 @@ class AccountsApi:
             '456': None,
             '457': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

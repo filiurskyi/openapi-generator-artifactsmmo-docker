@@ -59,14 +59,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
         # Action Accept New Task
-        api_response = await api_instance.action_accept_new_task_my_name_action_task_new_post(name)
+        api_response = api_instance.action_accept_new_task_my_name_action_task_new_post(name)
         print("The response of MyCharactersApi->action_accept_new_task_my_name_action_task_new_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -142,14 +142,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
         # Action Complete Task
-        api_response = await api_instance.action_complete_task_my_name_action_task_complete_post(name)
+        api_response = api_instance.action_complete_task_my_name_action_task_complete_post(name)
         print("The response of MyCharactersApi->action_complete_task_my_name_action_task_complete_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -228,7 +228,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -236,7 +236,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Crafting
-        api_response = await api_instance.action_crafting_my_name_action_crafting_post(name, crafting_schema)
+        api_response = api_instance.action_crafting_my_name_action_crafting_post(name, crafting_schema)
         print("The response of MyCharactersApi->action_crafting_my_name_action_crafting_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -317,7 +317,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -325,7 +325,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Delete Item
-        api_response = await api_instance.action_delete_item_my_name_action_delete_post(name, simple_item_schema)
+        api_response = api_instance.action_delete_item_my_name_action_delete_post(name, simple_item_schema)
         print("The response of MyCharactersApi->action_delete_item_my_name_action_delete_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -402,7 +402,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -410,7 +410,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Deposit Bank Gold
-        api_response = await api_instance.action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(name, deposit_withdraw_gold_schema)
+        api_response = api_instance.action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(name, deposit_withdraw_gold_schema)
         print("The response of MyCharactersApi->action_deposit_bank_gold_my_name_action_bank_deposit_gold_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -489,7 +489,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -497,7 +497,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Deposit Bank
-        api_response = await api_instance.action_deposit_bank_my_name_action_bank_deposit_post(name, simple_item_schema)
+        api_response = api_instance.action_deposit_bank_my_name_action_bank_deposit_post(name, simple_item_schema)
         print("The response of MyCharactersApi->action_deposit_bank_my_name_action_bank_deposit_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -577,7 +577,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -585,7 +585,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Equip Item
-        api_response = await api_instance.action_equip_item_my_name_action_equip_post(name, equip_schema)
+        api_response = api_instance.action_equip_item_my_name_action_equip_post(name, equip_schema)
         print("The response of MyCharactersApi->action_equip_item_my_name_action_equip_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -665,14 +665,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
         # Action Fight
-        api_response = await api_instance.action_fight_my_name_action_fight_post(name)
+        api_response = api_instance.action_fight_my_name_action_fight_post(name)
         print("The response of MyCharactersApi->action_fight_my_name_action_fight_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -748,14 +748,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
         # Action Gathering
-        api_response = await api_instance.action_gathering_my_name_action_gathering_post(name)
+        api_response = api_instance.action_gathering_my_name_action_gathering_post(name)
         print("The response of MyCharactersApi->action_gathering_my_name_action_gathering_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -833,7 +833,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -841,7 +841,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Ge Buy Item
-        api_response = await api_instance.action_ge_buy_item_my_name_action_ge_buy_post(name, ge_transaction_item_schema)
+        api_response = api_instance.action_ge_buy_item_my_name_action_ge_buy_post(name, ge_transaction_item_schema)
         print("The response of MyCharactersApi->action_ge_buy_item_my_name_action_ge_buy_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -923,7 +923,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -931,7 +931,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Ge Sell Item
-        api_response = await api_instance.action_ge_sell_item_my_name_action_ge_sell_post(name, ge_transaction_item_schema)
+        api_response = api_instance.action_ge_sell_item_my_name_action_ge_sell_post(name, ge_transaction_item_schema)
         print("The response of MyCharactersApi->action_ge_sell_item_my_name_action_ge_sell_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1012,7 +1012,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -1020,7 +1020,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Move
-        api_response = await api_instance.action_move_my_name_action_move_post(name, destination_schema)
+        api_response = api_instance.action_move_my_name_action_move_post(name, destination_schema)
         print("The response of MyCharactersApi->action_move_my_name_action_move_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1098,7 +1098,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -1106,7 +1106,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Recycling
-        api_response = await api_instance.action_recycling_my_name_action_recycling_post(name, recycling_schema)
+        api_response = api_instance.action_recycling_my_name_action_recycling_post(name, recycling_schema)
         print("The response of MyCharactersApi->action_recycling_my_name_action_recycling_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1187,14 +1187,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
         # Action Task Exchange
-        api_response = await api_instance.action_task_exchange_my_name_action_task_exchange_post(name)
+        api_response = api_instance.action_task_exchange_my_name_action_task_exchange_post(name)
         print("The response of MyCharactersApi->action_task_exchange_my_name_action_task_exchange_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1272,7 +1272,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -1280,7 +1280,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Unequip Item
-        api_response = await api_instance.action_unequip_item_my_name_action_unequip_post(name, unequip_schema)
+        api_response = api_instance.action_unequip_item_my_name_action_unequip_post(name, unequip_schema)
         print("The response of MyCharactersApi->action_unequip_item_my_name_action_unequip_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1359,7 +1359,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -1367,7 +1367,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Withdraw Bank Gold
-        api_response = await api_instance.action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(name, deposit_withdraw_gold_schema)
+        api_response = api_instance.action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(name, deposit_withdraw_gold_schema)
         print("The response of MyCharactersApi->action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1446,7 +1446,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
@@ -1454,7 +1454,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Action Withdraw Bank
-        api_response = await api_instance.action_withdraw_bank_my_name_action_bank_withdraw_post(name, simple_item_schema)
+        api_response = api_instance.action_withdraw_bank_my_name_action_bank_withdraw_post(name, simple_item_schema)
         print("The response of MyCharactersApi->action_withdraw_bank_my_name_action_bank_withdraw_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1534,7 +1534,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     page = 1 # int | Page number (optional) (default to 1)
@@ -1542,7 +1542,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Characters Logs
-        api_response = await api_instance.get_all_characters_logs_my_logs_get(page=page, size=size)
+        api_response = api_instance.get_all_characters_logs_my_logs_get(page=page, size=size)
         print("The response of MyCharactersApi->get_all_characters_logs_my_logs_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1616,13 +1616,13 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyCharactersApi(api_client)
 
     try:
         # Get My Characters
-        api_response = await api_instance.get_my_characters_my_characters_get()
+        api_response = api_instance.get_my_characters_my_characters_get()
         print("The response of MyCharactersApi->get_my_characters_my_characters_get:\n")
         pprint(api_response)
     except Exception as e:

@@ -32,7 +32,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MonstersApi(api_client)
     min_level = 56 # int | Monster minimum level. (optional)
@@ -43,7 +43,7 @@ async with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Monsters
-        api_response = await api_instance.get_all_monsters_monsters_get(min_level=min_level, max_level=max_level, drop=drop, page=page, size=size)
+        api_response = api_instance.get_all_monsters_monsters_get(min_level=min_level, max_level=max_level, drop=drop, page=page, size=size)
         print("The response of MonstersApi->get_all_monsters_monsters_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -109,14 +109,14 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MonstersApi(api_client)
     code = 'red_slime' # str | The code of the monster.
 
     try:
         # Get Monster
-        api_response = await api_instance.get_monster_monsters_code_get(code)
+        api_response = api_instance.get_monster_monsters_code_get(code)
         print("The response of MonstersApi->get_monster_monsters_code_get:\n")
         pprint(api_response)
     except Exception as e:

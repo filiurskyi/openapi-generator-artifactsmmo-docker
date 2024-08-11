@@ -42,13 +42,13 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with pyartifactsmmo.ApiClient(configuration) as api_client:
+with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.TokenApi(api_client)
 
     try:
         # Generate Token
-        api_response = await api_instance.generate_token_token_post()
+        api_response = api_instance.generate_token_token_post()
         print("The response of TokenApi->generate_token_token_post:\n")
         pprint(api_response)
     except Exception as e:
