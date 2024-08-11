@@ -28,7 +28,7 @@ mypy = "1.4.1"
 
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.pylint.'MESSAGES CONTROL']
@@ -40,6 +40,7 @@ files = [
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
+
 # TODO: enable "strict" once all these individual checks are passing
 # strict = true
 
