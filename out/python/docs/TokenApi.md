@@ -1,4 +1,4 @@
-# openapi_client.TokenApi
+# pyartifactsmmo.TokenApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Use your account as HTTPBasic Auth to generate your token to use the API. You ca
 * Basic Authentication (HTTPBasic):
 
 ```python
-import openapi_client
-from openapi_client.models.token_response_schema import TokenResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.token_response_schema import TokenResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -36,15 +36,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: HTTPBasic
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TokenApi(api_client)
+    api_instance = pyartifactsmmo.TokenApi(api_client)
 
     try:
         # Generate Token

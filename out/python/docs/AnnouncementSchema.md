@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.announcement_schema import AnnouncementSchema
+from pyartifactsmmo.models.announcement_schema import AnnouncementSchema
 
 # TODO update the JSON string below
 json = "{}"

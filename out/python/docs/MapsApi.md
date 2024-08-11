@@ -1,4 +1,4 @@
-# openapi_client.MapsApi
+# pyartifactsmmo.MapsApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Fetch maps details.
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_map_schema import DataPageMapSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_map_schema import DataPageMapSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsApi(api_client)
+    api_instance = pyartifactsmmo.MapsApi(api_client)
     content_type = 'content_type_example' # str | Type of content on the map. (optional)
     content_code = 'content_code_example' # str | Content code on the map. (optional)
     page = 1 # int | Page number (optional) (default to 1)
@@ -94,22 +94,22 @@ Retrieve the details of a map.
 
 
 ```python
-import openapi_client
-from openapi_client.models.map_response_schema import MapResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.map_response_schema import MapResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsApi(api_client)
+    api_instance = pyartifactsmmo.MapsApi(api_client)
     x = 56 # int | The position x of the map.
     y = 56 # int | The position X of the map.
 

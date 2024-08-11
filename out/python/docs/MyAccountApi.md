@@ -1,4 +1,4 @@
-# openapi_client.MyAccountApi
+# pyartifactsmmo.MyAccountApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,15 +21,15 @@ Change your account password. Changing the password reset the account token.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.change_password import ChangePassword
-from openapi_client.models.response_schema import ResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.change_password import ChangePassword
+from pyartifactsmmo.models.response_schema import ResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -39,15 +39,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyAccountApi(api_client)
-    change_password = openapi_client.ChangePassword() # ChangePassword | 
+    api_instance = pyartifactsmmo.MyAccountApi(api_client)
+    change_password = pyartifactsmmo.ChangePassword() # ChangePassword | 
 
     try:
         # Change Password
@@ -101,14 +101,14 @@ Fetch golds in your bank.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.gold_bank_response_schema import GoldBankResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.gold_bank_response_schema import GoldBankResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyAccountApi(api_client)
+    api_instance = pyartifactsmmo.MyAccountApi(api_client)
 
     try:
         # Get Bank Golds
@@ -175,14 +175,14 @@ Fetch all items in your bank.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_simple_item_schema import DataPageSimpleItemSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_simple_item_schema import DataPageSimpleItemSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -192,14 +192,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyAccountApi(api_client)
+    api_instance = pyartifactsmmo.MyAccountApi(api_client)
     item_code = 'item_code_example' # str | Item to search in your bank. (optional)
     page = 1 # int | Page number (optional) (default to 1)
     size = 50 # int | Page size (optional) (default to 50)

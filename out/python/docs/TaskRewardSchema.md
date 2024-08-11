@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.task_reward_schema import TaskRewardSchema
+from pyartifactsmmo.models.task_reward_schema import TaskRewardSchema
 
 # TODO update the JSON string below
 json = "{}"

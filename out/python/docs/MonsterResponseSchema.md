@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.monster_response_schema import MonsterResponseSchema
+from pyartifactsmmo.models.monster_response_schema import MonsterResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

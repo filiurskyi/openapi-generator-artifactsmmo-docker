@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_page_character_schema import DataPageCharacterSchema
+from pyartifactsmmo.models.data_page_character_schema import DataPageCharacterSchema
 
 # TODO update the JSON string below
 json = "{}"

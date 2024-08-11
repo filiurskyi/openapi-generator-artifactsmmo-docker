@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_page_map_schema import DataPageMapSchema
+from pyartifactsmmo.models.data_page_map_schema import DataPageMapSchema
 
 # TODO update the JSON string below
 json = "{}"

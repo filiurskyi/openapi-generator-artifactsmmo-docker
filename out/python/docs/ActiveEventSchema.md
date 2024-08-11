@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.active_event_schema import ActiveEventSchema
+from pyartifactsmmo.models.active_event_schema import ActiveEventSchema
 
 # TODO update the JSON string below
 json = "{}"

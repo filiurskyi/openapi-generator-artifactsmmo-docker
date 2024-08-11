@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.recycling_data_schema import RecyclingDataSchema
+from pyartifactsmmo.models.recycling_data_schema import RecyclingDataSchema
 
 # TODO update the JSON string below
 json = "{}"

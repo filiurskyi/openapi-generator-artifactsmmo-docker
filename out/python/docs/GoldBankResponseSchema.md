@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.gold_bank_response_schema import GoldBankResponseSchema
+from pyartifactsmmo.models.gold_bank_response_schema import GoldBankResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.GrandExchangeApi
+# pyartifactsmmo.GrandExchangeApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Fetch Grand Exchange items details.
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_ge_item_schema import DataPageGEItemSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_ge_item_schema import DataPageGEItemSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GrandExchangeApi(api_client)
+    api_instance = pyartifactsmmo.GrandExchangeApi(api_client)
     page = 1 # int | Page number (optional) (default to 1)
     size = 50 # int | Page size (optional) (default to 50)
 
@@ -90,22 +90,22 @@ Retrieve the details of a Grand Exchange item.
 
 
 ```python
-import openapi_client
-from openapi_client.models.ge_item_response_schema import GEItemResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.ge_item_response_schema import GEItemResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GrandExchangeApi(api_client)
+    api_instance = pyartifactsmmo.GrandExchangeApi(api_client)
     code = 'code_example' # str | The code of the item.
 
     try:

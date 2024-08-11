@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.gold_schema import GoldSchema
+from pyartifactsmmo.models.gold_schema import GoldSchema
 
 # TODO update the JSON string below
 json = "{}"

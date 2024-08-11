@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ge_item_schema import GEItemSchema
+from pyartifactsmmo.models.ge_item_schema import GEItemSchema
 
 # TODO update the JSON string below
 json = "{}"

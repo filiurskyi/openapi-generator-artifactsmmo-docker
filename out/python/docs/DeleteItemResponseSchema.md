@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.delete_item_response_schema import DeleteItemResponseSchema
+from pyartifactsmmo.models.delete_item_response_schema import DeleteItemResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

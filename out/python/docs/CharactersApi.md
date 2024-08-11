@@ -1,4 +1,4 @@
-# openapi_client.CharactersApi
+# pyartifactsmmo.CharactersApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Create new character on your account. You can create up to 5 characters.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.add_character_schema import AddCharacterSchema
-from openapi_client.models.character_response_schema import CharacterResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.add_character_schema import AddCharacterSchema
+from pyartifactsmmo.models.character_response_schema import CharacterResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -40,15 +40,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CharactersApi(api_client)
-    add_character_schema = openapi_client.AddCharacterSchema() # AddCharacterSchema | 
+    api_instance = pyartifactsmmo.CharactersApi(api_client)
+    add_character_schema = pyartifactsmmo.AddCharacterSchema() # AddCharacterSchema | 
 
     try:
         # Create Character
@@ -103,15 +103,15 @@ Delete character on your account.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.character_response_schema import CharacterResponseSchema
-from openapi_client.models.delete_character_schema import DeleteCharacterSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.character_response_schema import CharacterResponseSchema
+from pyartifactsmmo.models.delete_character_schema import DeleteCharacterSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -121,15 +121,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CharactersApi(api_client)
-    delete_character_schema = openapi_client.DeleteCharacterSchema() # DeleteCharacterSchema | 
+    api_instance = pyartifactsmmo.CharactersApi(api_client)
+    delete_character_schema = pyartifactsmmo.DeleteCharacterSchema() # DeleteCharacterSchema | 
 
     try:
         # Delete Character
@@ -182,22 +182,22 @@ Fetch characters details.
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_character_schema import DataPageCharacterSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_character_schema import DataPageCharacterSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CharactersApi(api_client)
+    api_instance = pyartifactsmmo.CharactersApi(api_client)
     sort = 'sort_example' # str | Default sort by combat total XP. (optional)
     page = 1 # int | Page number (optional) (default to 1)
     size = 50 # int | Page size (optional) (default to 50)
@@ -255,22 +255,22 @@ Retrieve the details of a character.
 
 
 ```python
-import openapi_client
-from openapi_client.models.character_response_schema import CharacterResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.character_response_schema import CharacterResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CharactersApi(api_client)
+    api_instance = pyartifactsmmo.CharactersApi(api_client)
     name = 'name_example' # str | The character name.
 
     try:

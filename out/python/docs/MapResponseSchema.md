@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.map_response_schema import MapResponseSchema
+from pyartifactsmmo.models.map_response_schema import MapResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

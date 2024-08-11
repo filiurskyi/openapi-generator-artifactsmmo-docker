@@ -1,4 +1,4 @@
-# openapi_client.AccountsApi
+# pyartifactsmmo.AccountsApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,24 +18,24 @@ Create an account.
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_account_schema import AddAccountSchema
-from openapi_client.models.response_schema import ResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.add_account_schema import AddAccountSchema
+from pyartifactsmmo.models.response_schema import ResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
-    add_account_schema = openapi_client.AddAccountSchema() # AddAccountSchema | 
+    api_instance = pyartifactsmmo.AccountsApi(api_client)
+    add_account_schema = pyartifactsmmo.AddAccountSchema() # AddAccountSchema | 
 
     try:
         # Create Account

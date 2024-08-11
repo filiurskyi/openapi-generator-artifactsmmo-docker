@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.task_reward_response_schema import TaskRewardResponseSchema
+from pyartifactsmmo.models.task_reward_response_schema import TaskRewardResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

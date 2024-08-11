@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.task_schema import TaskSchema
+from pyartifactsmmo.models.task_schema import TaskSchema
 
 # TODO update the JSON string below
 json = "{}"

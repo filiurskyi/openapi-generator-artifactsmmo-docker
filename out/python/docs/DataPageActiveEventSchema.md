@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_page_active_event_schema import DataPageActiveEventSchema
+from pyartifactsmmo.models.data_page_active_event_schema import DataPageActiveEventSchema
 
 # TODO update the JSON string below
 json = "{}"

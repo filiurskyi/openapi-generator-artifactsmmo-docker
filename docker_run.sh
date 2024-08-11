@@ -1,1 +1,1 @@
-docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i /local/openapi.json -g python -o /local/out/python --additional-properties=asyncNative=true,library=asyncio
+docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i /local/openapi.json -g python -o /local/out/python --additional-properties=packageName=pyartifactsmmo,asyncNative=true,library=asyncio

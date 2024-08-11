@@ -1,4 +1,4 @@
-# openapi_client.ItemsApi
+# pyartifactsmmo.ItemsApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Fetch items details.
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_item_schema import DataPageItemSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_item_schema import DataPageItemSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ItemsApi(api_client)
+    api_instance = pyartifactsmmo.ItemsApi(api_client)
     min_level = 56 # int | Minimum level items. (optional)
     max_level = 56 # int | Maximum level items. (optional)
     name = 'name_example' # str | Name of the item. (optional)
@@ -102,22 +102,22 @@ Retrieve the details of a item.
 
 
 ```python
-import openapi_client
-from openapi_client.models.item_response_schema import ItemResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.item_response_schema import ItemResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ItemsApi(api_client)
+    api_instance = pyartifactsmmo.ItemsApi(api_client)
     code = 'code_example' # str | The code of the item.
 
     try:

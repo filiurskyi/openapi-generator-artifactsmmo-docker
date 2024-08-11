@@ -1,4 +1,4 @@
-# openapi_client.ResourcesApi
+# pyartifactsmmo.ResourcesApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Fetch resources details.
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_resource_schema import DataPageResourceSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_resource_schema import DataPageResourceSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ResourcesApi(api_client)
+    api_instance = pyartifactsmmo.ResourcesApi(api_client)
     min_level = 56 # int | Skill minimum level. (optional)
     max_level = 56 # int | Skill maximum level. (optional)
     skill = 'skill_example' # str | The code of the skill. (optional)
@@ -98,22 +98,22 @@ Retrieve the details of a resource.
 
 
 ```python
-import openapi_client
-from openapi_client.models.resource_response_schema import ResourceResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.resource_response_schema import ResourceResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ResourcesApi(api_client)
+    api_instance = pyartifactsmmo.ResourcesApi(api_client)
     code = 'copper_rocks' # str | The code of the resource.
 
     try:

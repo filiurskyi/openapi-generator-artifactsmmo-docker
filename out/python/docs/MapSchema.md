@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.map_schema import MapSchema
+from pyartifactsmmo.models.map_schema import MapSchema
 
 # TODO update the JSON string below
 json = "{}"

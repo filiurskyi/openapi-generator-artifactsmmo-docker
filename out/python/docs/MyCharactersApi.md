@@ -1,4 +1,4 @@
-# openapi_client.MyCharactersApi
+# pyartifactsmmo.MyCharactersApi
 
 All URIs are relative to *http://localhost*
 
@@ -37,14 +37,14 @@ Accepting a new task.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.task_response_schema import TaskResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.task_response_schema import TaskResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -54,14 +54,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
@@ -120,14 +120,14 @@ Complete a task.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.task_reward_response_schema import TaskRewardResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.task_reward_response_schema import TaskRewardResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -137,14 +137,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
@@ -205,15 +205,15 @@ Crafting an item. The character must be on a map with a workshop.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.crafting_schema import CraftingSchema
-from openapi_client.models.skill_response_schema import SkillResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.crafting_schema import CraftingSchema
+from pyartifactsmmo.models.skill_response_schema import SkillResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -223,16 +223,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    crafting_schema = openapi_client.CraftingSchema() # CraftingSchema | 
+    crafting_schema = pyartifactsmmo.CraftingSchema() # CraftingSchema | 
 
     try:
         # Action Crafting
@@ -294,15 +294,15 @@ Delete an item from your character's inventory.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.delete_item_response_schema import DeleteItemResponseSchema
-from openapi_client.models.simple_item_schema import SimpleItemSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.delete_item_response_schema import DeleteItemResponseSchema
+from pyartifactsmmo.models.simple_item_schema import SimpleItemSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -312,16 +312,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    simple_item_schema = openapi_client.SimpleItemSchema() # SimpleItemSchema | 
+    simple_item_schema = pyartifactsmmo.SimpleItemSchema() # SimpleItemSchema | 
 
     try:
         # Action Delete Item
@@ -379,15 +379,15 @@ Deposit golds in a bank on the character's map.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.deposit_withdraw_gold_schema import DepositWithdrawGoldSchema
-from openapi_client.models.gold_response_schema import GoldResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.deposit_withdraw_gold_schema import DepositWithdrawGoldSchema
+from pyartifactsmmo.models.gold_response_schema import GoldResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -397,16 +397,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    deposit_withdraw_gold_schema = openapi_client.DepositWithdrawGoldSchema() # DepositWithdrawGoldSchema | 
+    deposit_withdraw_gold_schema = pyartifactsmmo.DepositWithdrawGoldSchema() # DepositWithdrawGoldSchema | 
 
     try:
         # Action Deposit Bank Gold
@@ -466,15 +466,15 @@ Deposit an item in a bank on the character's map.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.action_item_bank_response_schema import ActionItemBankResponseSchema
-from openapi_client.models.simple_item_schema import SimpleItemSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.action_item_bank_response_schema import ActionItemBankResponseSchema
+from pyartifactsmmo.models.simple_item_schema import SimpleItemSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -484,16 +484,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    simple_item_schema = openapi_client.SimpleItemSchema() # SimpleItemSchema | 
+    simple_item_schema = pyartifactsmmo.SimpleItemSchema() # SimpleItemSchema | 
 
     try:
         # Action Deposit Bank
@@ -554,15 +554,15 @@ Equip an item on your character.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.equip_schema import EquipSchema
-from openapi_client.models.equipment_response_schema import EquipmentResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.equip_schema import EquipSchema
+from pyartifactsmmo.models.equipment_response_schema import EquipmentResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -572,16 +572,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    equip_schema = openapi_client.EquipSchema() # EquipSchema | 
+    equip_schema = pyartifactsmmo.EquipSchema() # EquipSchema | 
 
     try:
         # Action Equip Item
@@ -643,14 +643,14 @@ Start a fight against a monster on the character's map.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.character_fight_response_schema import CharacterFightResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.character_fight_response_schema import CharacterFightResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -660,14 +660,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
@@ -726,14 +726,14 @@ Harvest a resource on the character's map.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.skill_response_schema import SkillResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.skill_response_schema import SkillResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -743,14 +743,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
@@ -810,15 +810,15 @@ Buy an item at the Grand Exchange on the character's map.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.ge_transaction_item_schema import GETransactionItemSchema
-from openapi_client.models.ge_transaction_response_schema import GETransactionResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.ge_transaction_item_schema import GETransactionItemSchema
+from pyartifactsmmo.models.ge_transaction_response_schema import GETransactionResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -828,16 +828,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    ge_transaction_item_schema = openapi_client.GETransactionItemSchema() # GETransactionItemSchema | 
+    ge_transaction_item_schema = pyartifactsmmo.GETransactionItemSchema() # GETransactionItemSchema | 
 
     try:
         # Action Ge Buy Item
@@ -900,15 +900,15 @@ Sell an item at the Grand Exchange on the character's map.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.ge_transaction_item_schema import GETransactionItemSchema
-from openapi_client.models.ge_transaction_response_schema import GETransactionResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.ge_transaction_item_schema import GETransactionItemSchema
+from pyartifactsmmo.models.ge_transaction_response_schema import GETransactionResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -918,16 +918,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    ge_transaction_item_schema = openapi_client.GETransactionItemSchema() # GETransactionItemSchema | 
+    ge_transaction_item_schema = pyartifactsmmo.GETransactionItemSchema() # GETransactionItemSchema | 
 
     try:
         # Action Ge Sell Item
@@ -989,15 +989,15 @@ Moves a character on the map using the map's X and Y position.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.character_movement_response_schema import CharacterMovementResponseSchema
-from openapi_client.models.destination_schema import DestinationSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.character_movement_response_schema import CharacterMovementResponseSchema
+from pyartifactsmmo.models.destination_schema import DestinationSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1007,16 +1007,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    destination_schema = openapi_client.DestinationSchema() # DestinationSchema | 
+    destination_schema = pyartifactsmmo.DestinationSchema() # DestinationSchema | 
 
     try:
         # Action Move
@@ -1075,15 +1075,15 @@ Recyling an item. The character must be on a map with a workshop (only for equip
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.recycling_response_schema import RecyclingResponseSchema
-from openapi_client.models.recycling_schema import RecyclingSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.recycling_response_schema import RecyclingResponseSchema
+from pyartifactsmmo.models.recycling_schema import RecyclingSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1093,16 +1093,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    recycling_schema = openapi_client.RecyclingSchema() # RecyclingSchema | 
+    recycling_schema = pyartifactsmmo.RecyclingSchema() # RecyclingSchema | 
 
     try:
         # Action Recycling
@@ -1165,14 +1165,14 @@ Exchange 3 tasks coins for a random reward. Rewards are exclusive resources for 
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.task_reward_response_schema import TaskRewardResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.task_reward_response_schema import TaskRewardResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1182,14 +1182,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
 
     try:
@@ -1249,15 +1249,15 @@ Unequip an item on your character.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.equipment_response_schema import EquipmentResponseSchema
-from openapi_client.models.unequip_schema import UnequipSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.equipment_response_schema import EquipmentResponseSchema
+from pyartifactsmmo.models.unequip_schema import UnequipSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1267,16 +1267,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    unequip_schema = openapi_client.UnequipSchema() # UnequipSchema | 
+    unequip_schema = pyartifactsmmo.UnequipSchema() # UnequipSchema | 
 
     try:
         # Action Unequip Item
@@ -1336,15 +1336,15 @@ Withdraw gold from your bank.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.deposit_withdraw_gold_schema import DepositWithdrawGoldSchema
-from openapi_client.models.gold_response_schema import GoldResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.deposit_withdraw_gold_schema import DepositWithdrawGoldSchema
+from pyartifactsmmo.models.gold_response_schema import GoldResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1354,16 +1354,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    deposit_withdraw_gold_schema = openapi_client.DepositWithdrawGoldSchema() # DepositWithdrawGoldSchema | 
+    deposit_withdraw_gold_schema = pyartifactsmmo.DepositWithdrawGoldSchema() # DepositWithdrawGoldSchema | 
 
     try:
         # Action Withdraw Bank Gold
@@ -1423,15 +1423,15 @@ Take an item from your bank and put it in the character's inventory.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.action_item_bank_response_schema import ActionItemBankResponseSchema
-from openapi_client.models.simple_item_schema import SimpleItemSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.action_item_bank_response_schema import ActionItemBankResponseSchema
+from pyartifactsmmo.models.simple_item_schema import SimpleItemSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1441,16 +1441,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     name = 'name_example' # str | Name of your character.
-    simple_item_schema = openapi_client.SimpleItemSchema() # SimpleItemSchema | 
+    simple_item_schema = pyartifactsmmo.SimpleItemSchema() # SimpleItemSchema | 
 
     try:
         # Action Withdraw Bank
@@ -1512,14 +1512,14 @@ History of the last 100 actions of all your characters.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_log_schema import DataPageLogSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_log_schema import DataPageLogSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1529,14 +1529,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
     page = 1 # int | Page number (optional) (default to 1)
     size = 50 # int | Page size (optional) (default to 50)
 
@@ -1594,14 +1594,14 @@ List of your characters.
 * Bearer Authentication (JWTBearer):
 
 ```python
-import openapi_client
-from openapi_client.models.my_characters_list_schema import MyCharactersListSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.my_characters_list_schema import MyCharactersListSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
@@ -1611,14 +1611,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: JWTBearer
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MyCharactersApi(api_client)
+    api_instance = pyartifactsmmo.MyCharactersApi(api_client)
 
     try:
         # Get My Characters

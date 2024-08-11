@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.craft_schema import CraftSchema
+from pyartifactsmmo.models.craft_schema import CraftSchema
 
 # TODO update the JSON string below
 json = "{}"

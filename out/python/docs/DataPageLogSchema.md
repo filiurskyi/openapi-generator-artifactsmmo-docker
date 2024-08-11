@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_page_log_schema import DataPageLogSchema
+from pyartifactsmmo.models.data_page_log_schema import DataPageLogSchema
 
 # TODO update the JSON string below
 json = "{}"

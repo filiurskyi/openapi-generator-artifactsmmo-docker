@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_page_monster_schema import DataPageMonsterSchema
+from pyartifactsmmo.models.data_page_monster_schema import DataPageMonsterSchema
 
 # TODO update the JSON string below
 json = "{}"

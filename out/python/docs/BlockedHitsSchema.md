@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.blocked_hits_schema import BlockedHitsSchema
+from pyartifactsmmo.models.blocked_hits_schema import BlockedHitsSchema
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.unequip_schema import UnequipSchema
+from pyartifactsmmo.models.unequip_schema import UnequipSchema
 
 # TODO update the JSON string below
 json = "{}"

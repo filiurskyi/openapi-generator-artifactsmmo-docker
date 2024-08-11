@@ -80,7 +80,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.character_schema import CharacterSchema
+from pyartifactsmmo.models.character_schema import CharacterSchema
 
 # TODO update the JSON string below
 json = "{}"

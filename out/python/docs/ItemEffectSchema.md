@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.item_effect_schema import ItemEffectSchema
+from pyartifactsmmo.models.item_effect_schema import ItemEffectSchema
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "openapi-client"
+NAME = "pyartifactsmmo"
 VERSION = "1.0.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
@@ -47,5 +47,5 @@ setup(
     long_description="""\
      Artifacts is an API-based MMO game where you can manage 5 characters to explore, fight, gather resources, craft items and much more.  Website: https://artifactsmmo.com/  Documentation: https://docs.artifactsmmo.com/  OpenAPI Spec: https://api.artifactsmmo.com/openapi.json 
     """,  # noqa: E501
-    package_data={"openapi_client": ["py.typed"]},
+    package_data={"pyartifactsmmo": ["py.typed"]},
 )

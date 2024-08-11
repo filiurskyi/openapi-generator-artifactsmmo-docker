@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.resource_schema import ResourceSchema
+from pyartifactsmmo.models.resource_schema import ResourceSchema
 
 # TODO update the JSON string below
 json = "{}"

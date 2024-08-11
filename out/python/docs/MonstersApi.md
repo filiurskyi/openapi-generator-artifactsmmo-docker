@@ -1,4 +1,4 @@
-# openapi_client.MonstersApi
+# pyartifactsmmo.MonstersApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Fetch monsters details.
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_page_monster_schema import DataPageMonsterSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.data_page_monster_schema import DataPageMonsterSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MonstersApi(api_client)
+    api_instance = pyartifactsmmo.MonstersApi(api_client)
     min_level = 56 # int | Monster minimum level. (optional)
     max_level = 56 # int | Monster maximum level. (optional)
     drop = 'green_slimeball' # str | Item code of the drop. (optional)
@@ -96,22 +96,22 @@ Retrieve the details of a monster.
 
 
 ```python
-import openapi_client
-from openapi_client.models.monster_response_schema import MonsterResponseSchema
-from openapi_client.rest import ApiException
+import pyartifactsmmo
+from pyartifactsmmo.models.monster_response_schema import MonsterResponseSchema
+from pyartifactsmmo.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pyartifactsmmo.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with openapi_client.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MonstersApi(api_client)
+    api_instance = pyartifactsmmo.MonstersApi(api_client)
     code = 'red_slime' # str | The code of the monster.
 
     try:

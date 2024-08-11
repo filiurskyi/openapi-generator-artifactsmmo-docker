@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.character_fight_data_schema import CharacterFightDataSchema
+from pyartifactsmmo.models.character_fight_data_schema import CharacterFightDataSchema
 
 # TODO update the JSON string below
 json = "{}"

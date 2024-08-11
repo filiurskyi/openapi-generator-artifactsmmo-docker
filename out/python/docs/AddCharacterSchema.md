@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_character_schema import AddCharacterSchema
+from pyartifactsmmo.models.add_character_schema import AddCharacterSchema
 
 # TODO update the JSON string below
 json = "{}"

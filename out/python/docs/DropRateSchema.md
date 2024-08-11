@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.drop_rate_schema import DropRateSchema
+from pyartifactsmmo.models.drop_rate_schema import DropRateSchema
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.inventory_slot import InventorySlot
+from pyartifactsmmo.models.inventory_slot import InventorySlot
 
 # TODO update the JSON string below
 json = "{}"

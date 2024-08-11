@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.character_movement_response_schema import CharacterMovementResponseSchema
+from pyartifactsmmo.models.character_movement_response_schema import CharacterMovementResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

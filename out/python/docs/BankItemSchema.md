@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bank_item_schema import BankItemSchema
+from pyartifactsmmo.models.bank_item_schema import BankItemSchema
 
 # TODO update the JSON string below
 json = "{}"
