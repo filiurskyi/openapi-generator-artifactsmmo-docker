@@ -34,7 +34,7 @@ REQUIRES = [
 
 setup(
     name=NAME,
-    # version=VERSION,
+    version=VERSION,
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
     description="Artifacts API",
