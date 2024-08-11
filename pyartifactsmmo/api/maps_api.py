@@ -41,7 +41,7 @@ class MapsApi:
 
 
     @validate_call
-    def get_all_maps_maps_get(
+    async def get_all_maps_maps_get(
         self,
         content_type: Annotated[Optional[StrictStr], Field(description="Type of content on the map.")] = None,
         content_code: Annotated[Optional[Annotated[str, Field(strict=True)]], Field(description="Content code on the map.")] = None,
@@ -109,11 +109,11 @@ class MapsApi:
             '200': "DataPageMapSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -121,7 +121,7 @@ class MapsApi:
 
 
     @validate_call
-    def get_all_maps_maps_get_with_http_info(
+    async def get_all_maps_maps_get_with_http_info(
         self,
         content_type: Annotated[Optional[StrictStr], Field(description="Type of content on the map.")] = None,
         content_code: Annotated[Optional[Annotated[str, Field(strict=True)]], Field(description="Content code on the map.")] = None,
@@ -189,11 +189,11 @@ class MapsApi:
             '200': "DataPageMapSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -201,7 +201,7 @@ class MapsApi:
 
 
     @validate_call
-    def get_all_maps_maps_get_without_preload_content(
+    async def get_all_maps_maps_get_without_preload_content(
         self,
         content_type: Annotated[Optional[StrictStr], Field(description="Type of content on the map.")] = None,
         content_code: Annotated[Optional[Annotated[str, Field(strict=True)]], Field(description="Content code on the map.")] = None,
@@ -269,7 +269,7 @@ class MapsApi:
             '200': "DataPageMapSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -355,7 +355,7 @@ class MapsApi:
 
 
     @validate_call
-    def get_map_maps_xy_get(
+    async def get_map_maps_xy_get(
         self,
         x: Annotated[StrictInt, Field(description="The position x of the map.")],
         y: Annotated[StrictInt, Field(description="The position X of the map.")],
@@ -415,11 +415,11 @@ class MapsApi:
             '200': "MapResponseSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -427,7 +427,7 @@ class MapsApi:
 
 
     @validate_call
-    def get_map_maps_xy_get_with_http_info(
+    async def get_map_maps_xy_get_with_http_info(
         self,
         x: Annotated[StrictInt, Field(description="The position x of the map.")],
         y: Annotated[StrictInt, Field(description="The position X of the map.")],
@@ -487,11 +487,11 @@ class MapsApi:
             '200': "MapResponseSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -499,7 +499,7 @@ class MapsApi:
 
 
     @validate_call
-    def get_map_maps_xy_get_without_preload_content(
+    async def get_map_maps_xy_get_without_preload_content(
         self,
         x: Annotated[StrictInt, Field(description="The position x of the map.")],
         y: Annotated[StrictInt, Field(description="The position X of the map.")],
@@ -559,7 +559,7 @@ class MapsApi:
             '200': "MapResponseSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

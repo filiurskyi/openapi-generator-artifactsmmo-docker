@@ -43,7 +43,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def change_password_my_change_password_post(
+    async def change_password_my_change_password_post(
         self,
         change_password: ChangePassword,
         _request_timeout: Union[
@@ -99,11 +99,11 @@ class MyAccountApi:
             '200': "ResponseSchema",
             '458': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -111,7 +111,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def change_password_my_change_password_post_with_http_info(
+    async def change_password_my_change_password_post_with_http_info(
         self,
         change_password: ChangePassword,
         _request_timeout: Union[
@@ -167,11 +167,11 @@ class MyAccountApi:
             '200': "ResponseSchema",
             '458': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -179,7 +179,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def change_password_my_change_password_post_without_preload_content(
+    async def change_password_my_change_password_post_without_preload_content(
         self,
         change_password: ChangePassword,
         _request_timeout: Union[
@@ -235,7 +235,7 @@ class MyAccountApi:
             '200': "ResponseSchema",
             '458': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -318,7 +318,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def get_bank_golds_my_bank_gold_get(
+    async def get_bank_golds_my_bank_gold_get(
         self,
         _request_timeout: Union[
             None,
@@ -369,11 +369,11 @@ class MyAccountApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "GoldBankResponseSchema",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -381,7 +381,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def get_bank_golds_my_bank_gold_get_with_http_info(
+    async def get_bank_golds_my_bank_gold_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -432,11 +432,11 @@ class MyAccountApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "GoldBankResponseSchema",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -444,7 +444,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def get_bank_golds_my_bank_gold_get_without_preload_content(
+    async def get_bank_golds_my_bank_gold_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -495,7 +495,7 @@ class MyAccountApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "GoldBankResponseSchema",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -562,7 +562,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def get_bank_items_my_bank_items_get(
+    async def get_bank_items_my_bank_items_get(
         self,
         item_code: Annotated[Optional[Annotated[str, Field(strict=True)]], Field(description="Item to search in your bank.")] = None,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
@@ -626,11 +626,11 @@ class MyAccountApi:
             '200': "DataPageSimpleItemSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -638,7 +638,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def get_bank_items_my_bank_items_get_with_http_info(
+    async def get_bank_items_my_bank_items_get_with_http_info(
         self,
         item_code: Annotated[Optional[Annotated[str, Field(strict=True)]], Field(description="Item to search in your bank.")] = None,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
@@ -702,11 +702,11 @@ class MyAccountApi:
             '200': "DataPageSimpleItemSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -714,7 +714,7 @@ class MyAccountApi:
 
 
     @validate_call
-    def get_bank_items_my_bank_items_get_without_preload_content(
+    async def get_bank_items_my_bank_items_get_without_preload_content(
         self,
         item_code: Annotated[Optional[Annotated[str, Field(strict=True)]], Field(description="Item to search in your bank.")] = None,
         page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Page number")] = None,
@@ -778,7 +778,7 @@ class MyAccountApi:
             '200': "DataPageSimpleItemSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

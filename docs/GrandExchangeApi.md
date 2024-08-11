@@ -32,7 +32,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.GrandExchangeApi(api_client)
     page = 1 # int | Page number (optional) (default to 1)
@@ -40,7 +40,7 @@ with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Ge Items
-        api_response = api_instance.get_all_ge_items_ge_get(page=page, size=size)
+        api_response = await api_instance.get_all_ge_items_ge_get(page=page, size=size)
         print("The response of GrandExchangeApi->get_all_ge_items_ge_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -103,14 +103,14 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.GrandExchangeApi(api_client)
     code = 'code_example' # str | The code of the item.
 
     try:
         # Get Ge Item
-        api_response = api_instance.get_ge_item_ge_code_get(code)
+        api_response = await api_instance.get_ge_item_ge_code_get(code)
         print("The response of GrandExchangeApi->get_ge_item_ge_code_get:\n")
         pprint(api_response)
     except Exception as e:

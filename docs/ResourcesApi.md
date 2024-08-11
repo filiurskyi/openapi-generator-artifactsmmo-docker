@@ -32,7 +32,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.ResourcesApi(api_client)
     min_level = 56 # int | Skill minimum level. (optional)
@@ -44,7 +44,7 @@ with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Resources
-        api_response = api_instance.get_all_resources_resources_get(min_level=min_level, max_level=max_level, skill=skill, drop=drop, page=page, size=size)
+        api_response = await api_instance.get_all_resources_resources_get(min_level=min_level, max_level=max_level, skill=skill, drop=drop, page=page, size=size)
         print("The response of ResourcesApi->get_all_resources_resources_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -111,14 +111,14 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.ResourcesApi(api_client)
     code = 'copper_rocks' # str | The code of the resource.
 
     try:
         # Get Resource
-        api_response = api_instance.get_resource_resources_code_get(code)
+        api_response = await api_instance.get_resource_resources_code_get(code)
         print("The response of ResourcesApi->get_resource_resources_code_get:\n")
         pprint(api_response)
     except Exception as e:
