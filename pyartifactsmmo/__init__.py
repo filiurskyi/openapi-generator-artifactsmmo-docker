@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # import apis into sdk package
 from pyartifactsmmo.api.accounts_api import AccountsApi
@@ -42,7 +42,9 @@ from pyartifactsmmo.exceptions import ApiAttributeError
 from pyartifactsmmo.exceptions import ApiException
 
 # import models into sdk package
-from pyartifactsmmo.models.action_item_bank_response_schema import ActionItemBankResponseSchema
+from pyartifactsmmo.models.action_item_bank_response_schema import (
+    ActionItemBankResponseSchema,
+)
 from pyartifactsmmo.models.active_event_schema import ActiveEventSchema
 from pyartifactsmmo.models.add_account_schema import AddAccountSchema
 from pyartifactsmmo.models.add_character_schema import AddCharacterSchema
@@ -51,15 +53,23 @@ from pyartifactsmmo.models.bank_item_schema import BankItemSchema
 from pyartifactsmmo.models.blocked_hits_schema import BlockedHitsSchema
 from pyartifactsmmo.models.change_password import ChangePassword
 from pyartifactsmmo.models.character_fight_data_schema import CharacterFightDataSchema
-from pyartifactsmmo.models.character_fight_response_schema import CharacterFightResponseSchema
-from pyartifactsmmo.models.character_movement_data_schema import CharacterMovementDataSchema
-from pyartifactsmmo.models.character_movement_response_schema import CharacterMovementResponseSchema
+from pyartifactsmmo.models.character_fight_response_schema import (
+    CharacterFightResponseSchema,
+)
+from pyartifactsmmo.models.character_movement_data_schema import (
+    CharacterMovementDataSchema,
+)
+from pyartifactsmmo.models.character_movement_response_schema import (
+    CharacterMovementResponseSchema,
+)
 from pyartifactsmmo.models.character_response_schema import CharacterResponseSchema
 from pyartifactsmmo.models.character_schema import CharacterSchema
 from pyartifactsmmo.models.cooldown_schema import CooldownSchema
 from pyartifactsmmo.models.craft_schema import CraftSchema
 from pyartifactsmmo.models.crafting_schema import CraftingSchema
-from pyartifactsmmo.models.data_page_active_event_schema import DataPageActiveEventSchema
+from pyartifactsmmo.models.data_page_active_event_schema import (
+    DataPageActiveEventSchema,
+)
 from pyartifactsmmo.models.data_page_character_schema import DataPageCharacterSchema
 from pyartifactsmmo.models.data_page_ge_item_schema import DataPageGEItemSchema
 from pyartifactsmmo.models.data_page_item_schema import DataPageItemSchema
@@ -83,7 +93,9 @@ from pyartifactsmmo.models.ge_item_response_schema import GEItemResponseSchema
 from pyartifactsmmo.models.ge_item_schema import GEItemSchema
 from pyartifactsmmo.models.ge_transaction_item_schema import GETransactionItemSchema
 from pyartifactsmmo.models.ge_transaction_list_schema import GETransactionListSchema
-from pyartifactsmmo.models.ge_transaction_response_schema import GETransactionResponseSchema
+from pyartifactsmmo.models.ge_transaction_response_schema import (
+    GETransactionResponseSchema,
+)
 from pyartifactsmmo.models.ge_transaction_schema import GETransactionSchema
 from pyartifactsmmo.models.gold_bank_response_schema import GoldBankResponseSchema
 from pyartifactsmmo.models.gold_response_schema import GoldResponseSchema
