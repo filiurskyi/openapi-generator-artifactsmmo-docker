@@ -44,14 +44,14 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyAccountApi(api_client)
     change_password = pyartifactsmmo.ChangePassword() # ChangePassword | 
 
     try:
         # Change Password
-        api_response = api_instance.change_password_my_change_password_post(change_password)
+        api_response = await api_instance.change_password_my_change_password_post(change_password)
         print("The response of MyAccountApi->change_password_my_change_password_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -123,13 +123,13 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyAccountApi(api_client)
 
     try:
         # Get Bank Golds
-        api_response = api_instance.get_bank_golds_my_bank_gold_get()
+        api_response = await api_instance.get_bank_golds_my_bank_gold_get()
         print("The response of MyAccountApi->get_bank_golds_my_bank_gold_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -197,7 +197,7 @@ configuration = pyartifactsmmo.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.MyAccountApi(api_client)
     item_code = 'item_code_example' # str | Item to search in your bank. (optional)
@@ -206,7 +206,7 @@ with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get Bank Items
-        api_response = api_instance.get_bank_items_my_bank_items_get(item_code=item_code, page=page, size=size)
+        api_response = await api_instance.get_bank_items_my_bank_items_get(item_code=item_code, page=page, size=size)
         print("The response of MyAccountApi->get_bank_items_my_bank_items_get:\n")
         pprint(api_response)
     except Exception as e:

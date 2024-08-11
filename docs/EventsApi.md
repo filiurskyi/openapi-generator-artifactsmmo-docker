@@ -31,7 +31,7 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.EventsApi(api_client)
     page = 1 # int | Page number (optional) (default to 1)
@@ -39,7 +39,7 @@ with pyartifactsmmo.ApiClient(configuration) as api_client:
 
     try:
         # Get All Events
-        api_response = api_instance.get_all_events_events_get(page=page, size=size)
+        api_response = await api_instance.get_all_events_events_get(page=page, size=size)
         print("The response of EventsApi->get_all_events_events_get:\n")
         pprint(api_response)
     except Exception as e:

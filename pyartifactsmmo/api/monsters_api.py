@@ -41,7 +41,7 @@ class MonstersApi:
 
 
     @validate_call
-    def get_all_monsters_monsters_get(
+    async def get_all_monsters_monsters_get(
         self,
         min_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Monster minimum level.")] = None,
         max_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Monster maximum level.")] = None,
@@ -113,11 +113,11 @@ class MonstersApi:
             '200': "DataPageMonsterSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -125,7 +125,7 @@ class MonstersApi:
 
 
     @validate_call
-    def get_all_monsters_monsters_get_with_http_info(
+    async def get_all_monsters_monsters_get_with_http_info(
         self,
         min_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Monster minimum level.")] = None,
         max_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Monster maximum level.")] = None,
@@ -197,11 +197,11 @@ class MonstersApi:
             '200': "DataPageMonsterSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -209,7 +209,7 @@ class MonstersApi:
 
 
     @validate_call
-    def get_all_monsters_monsters_get_without_preload_content(
+    async def get_all_monsters_monsters_get_without_preload_content(
         self,
         min_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Monster minimum level.")] = None,
         max_level: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="Monster maximum level.")] = None,
@@ -281,7 +281,7 @@ class MonstersApi:
             '200': "DataPageMonsterSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -372,7 +372,7 @@ class MonstersApi:
 
 
     @validate_call
-    def get_monster_monsters_code_get(
+    async def get_monster_monsters_code_get(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the monster.")],
         _request_timeout: Union[
@@ -428,11 +428,11 @@ class MonstersApi:
             '200': "MonsterResponseSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -440,7 +440,7 @@ class MonstersApi:
 
 
     @validate_call
-    def get_monster_monsters_code_get_with_http_info(
+    async def get_monster_monsters_code_get_with_http_info(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the monster.")],
         _request_timeout: Union[
@@ -496,11 +496,11 @@ class MonstersApi:
             '200': "MonsterResponseSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -508,7 +508,7 @@ class MonstersApi:
 
 
     @validate_call
-    def get_monster_monsters_code_get_without_preload_content(
+    async def get_monster_monsters_code_get_without_preload_content(
         self,
         code: Annotated[str, Field(strict=True, description="The code of the monster.")],
         _request_timeout: Union[
@@ -564,7 +564,7 @@ class MonstersApi:
             '200': "MonsterResponseSchema",
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -37,7 +37,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_status_get(
+    async def get_status_get(
         self,
         _request_timeout: Union[
             None,
@@ -88,11 +88,11 @@ class DefaultApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StatusResponseSchema",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -100,7 +100,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_status_get_with_http_info(
+    async def get_status_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -151,11 +151,11 @@ class DefaultApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StatusResponseSchema",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -163,7 +163,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_status_get_without_preload_content(
+    async def get_status_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -214,7 +214,7 @@ class DefaultApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StatusResponseSchema",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

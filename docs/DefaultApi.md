@@ -31,13 +31,13 @@ configuration = pyartifactsmmo.Configuration(
 
 
 # Enter a context with an instance of the API client
-with pyartifactsmmo.ApiClient(configuration) as api_client:
+async with pyartifactsmmo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyartifactsmmo.DefaultApi(api_client)
 
     try:
         # Get Status
-        api_response = api_instance.get_status_get()
+        api_response = await api_instance.get_status_get()
         print("The response of DefaultApi->get_status_get:\n")
         pprint(api_response)
     except Exception as e:
