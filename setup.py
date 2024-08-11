@@ -34,7 +34,9 @@ REQUIRES = [
 
 setup(
     name=NAME,
-    version=VERSION,
+    # version=VERSION,
+    use_scm_version=True,
+    setup_requires=["setuptools_scm"],
     description="Artifacts API",
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
@@ -43,7 +45,7 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     long_description="""\
      Artifacts is an API-based MMO game where you can manage 5 characters to explore, fight, gather resources, craft items and much more.  Website: https://artifactsmmo.com/  Documentation: https://docs.artifactsmmo.com/  OpenAPI Spec: https://api.artifactsmmo.com/openapi.json 
     """,  # noqa: E501
